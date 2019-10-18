@@ -1,0 +1,23 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">{{title}}</h1>
+  <p class="lead">{{description}}</p>
+</div>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+
+    <div class="card mb-4 box-shadow" *ngFor="let price of prices">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{price.title}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{price.price}} <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li *ngFor="let feature of price.features">{{feature}}</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block {{price.linkClass}}">{{price.link}}</button>
+      </div>
+    </div>
+
+  </div>
+</div>

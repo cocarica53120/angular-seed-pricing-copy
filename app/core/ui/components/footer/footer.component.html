@@ -1,0 +1,31 @@
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="container">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" alt="" width="24" height="24">
+        <small class="d-block mb-3 text-muted">{{title}}</small>
+    <p>
+      <small class="d-block mb-3 text-muted">
+        Angular {{version}}
+        <br><br>
+        <a href="https://stackblitz.com/fork/angular-seed-pricing" target="_blank">
+          <i class="fa fa-code-fork"></i>
+          Fork me on StackBlitz!
+        </a>
+      </small>
+    </p>
+
+      </div>
+      <div class="col-6 col-md" *ngFor="let set of links">
+        <h5>{{set.title}}</h5>
+        <ul class="list-unstyled text-small">
+          <li *ngFor="let link of set.links">
+            <a class="text-muted" [href]="link.link">
+              {{link.label}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
